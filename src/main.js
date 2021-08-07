@@ -3,8 +3,6 @@ import Vue from 'vue'
 
 // Third party NPM dependencies
 import BootstrapVue from 'bootstrap-vue'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
 import '@/assets/css/tailwind.css'
 
 // Local dependencies
@@ -15,6 +13,16 @@ import store from './store'
 // Extra configuration
 Vue.use(BootstrapVue)
 Vue.config.productionTip = false
+
+// Support for toggling theme mode
+// On page load or when changing themes, best to add inline in `head` to avoid FOUC
+// if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+//   document.documentElement.classList.add('dark')
+// } else {
+//   document.documentElement.classList.remove('dark')
+// }
+
+document.documentElement.classList.add('dark')
 
 new Vue({
   router,
