@@ -1,8 +1,9 @@
 <template>
-  <div id="app">
+  <div id="app" class="bg-white dark:bg-gray-800">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/" class="text-black dark:text-white">Home</router-link>
+      <span class="text-black dark:text-white"> | </span>
+      <router-link to="/about" class="text-black dark:text-white">About</router-link>
     </div>
     <router-view/>
   </div>
@@ -11,9 +12,4 @@
 <style lang="stylus">
 #app
   font-family Avenir, Helvetica, Arial, sans-serif
-  -webkit-font-smoothing antialiased
-  -moz-osx-font-smoothing grayscale
-  text-align center
-  color #2c3e50
-  margin-top 60px
 </style>
