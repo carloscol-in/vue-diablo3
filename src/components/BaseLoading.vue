@@ -47,6 +47,9 @@ export default {
 
 <style lang="stylus">
 
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
 .spinner-wrapper
     .spinner
         width 4rem
