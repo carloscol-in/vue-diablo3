@@ -17,7 +17,7 @@ export default {
         })
         .catch((err) => {
           commit('SET_ACCESS_TOKEN', null)
-          console.err('Error Auth: ', err)
+          console.log('Error Auth: ', err)
         })
         .finally(() => {
           commit('loading/SET_LOADING', false, { root: true })
