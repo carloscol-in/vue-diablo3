@@ -3,8 +3,8 @@
 import { post } from 'axios'
 
 // settings to make oauth call
-const clientId = process.env.CLIENT_ID
-const clientSecret = process.env.CLIENT_SECRET
+const clientId = process.env.VUE_APP_CLIENT_ID
+const clientSecret = process.env.VUE_APP_CLIENT_SECRET
 
 const REGION = 'us'
 const API_URL = `https://${REGION}.battle.net/oauth/token`
