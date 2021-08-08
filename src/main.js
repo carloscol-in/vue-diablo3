@@ -10,6 +10,9 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+// Global CSS
+import '@/assets/css/main.styl'
+
 // Extra configuration
 Vue.use(BootstrapVue)
 Vue.config.productionTip = false
@@ -29,7 +32,7 @@ new Vue({
   store,
   methods: {
     init () {
-      console.log('Hola')
+      store.dispatch('oauth/getToken', null, { root: true })
     }
   },
   created () {
