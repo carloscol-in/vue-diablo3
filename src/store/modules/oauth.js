@@ -1,6 +1,12 @@
 import * as oauth from '@/api/oauth'
 
 export default {
+  namespaced: true,
+  mutations: {
+    SET_ACCESS_TOKEN (state, payload) {
+      state.accessToken = payload
+    }
+  },
   actions: {
     getToken ({ commit }) {
       commit('loading/SET_LOADING', true, { root: true })
@@ -14,7 +20,6 @@ export default {
           console.err('Error Auth: ', err)
         })
         .finally(() => {
-          console.log('Hello hello')
           commit('loading/SET_LOADING', false, { root: true })
         })
     }
