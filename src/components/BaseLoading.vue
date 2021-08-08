@@ -5,7 +5,7 @@
             <b-spinner class="spinner" label="Loading..." :type="type" :variant="variant" />
         </div>
 
-        <p class="my5">Loading...</p>
+        <p class="my5 text-black dark:text-white">Loading...</p>
     </div>
 
 </template>
@@ -46,9 +46,6 @@ export default {
 </script>
 
 <style lang="stylus">
-
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 .spinner-wrapper
     .spinner
