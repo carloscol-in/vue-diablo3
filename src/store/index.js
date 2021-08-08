@@ -6,8 +6,6 @@ import loading from './modules/loading.js'
 
 Vue.use(Vuex)
 
-console.log('hellohello')
-
 export default new Vuex.Store({
   modules: {
     oauth,
