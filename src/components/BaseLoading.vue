@@ -29,7 +29,7 @@ export default {
           'info',
           'light',
           'dark'
-        ].indexOf(value) !== -1
+        ].includes(value)
       }
     },
     type: {
@@ -37,7 +37,7 @@ export default {
       type: String,
       default: 'border',
       validator: (value) => {
-        return ['border', 'grow'].indexOf(value) !== -1
+        return ['border', 'grow'].includes(value)
       }
     }
   }
