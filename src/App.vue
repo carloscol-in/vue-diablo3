@@ -1,13 +1,33 @@
 <template>
   <div id="app" class="bg-white dark:bg-gray-800">
-    <div id="nav">
-      <router-link to="/" class="text-black dark:text-white">Home</router-link>
-      <span class="text-black dark:text-white"> | </span>
-      <router-link to="/about" class="text-black dark:text-white">About</router-link>
-    </div>
-    <router-view/>
+    <LoadLayout v-if="isLoading">
+      <BaseLoading />
+    </LoadLayout>
+    <MainLayout v-else />
   </div>
 </template>
+
+<script>
+import { mapState } from 'vuex'
+
+import LoadLayout from './layouts/LoadLayout'
+import MainLayout from './layouts/MainLayout'
+import BaseLoading from '@/components/BaseLoading.vue'
+
+export default {
+  name: 'App',
+  components: {
+    MainLayout,
+    LoadLayout,
+    BaseLoading
+  },
+  computed: {
+    ...mapState('loading', {
+      isLoading: 'isLoading'
+    })
+  }
+}
+</script>
 
 <style lang="stylus">
 #app
