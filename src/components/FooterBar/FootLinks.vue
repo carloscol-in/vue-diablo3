@@ -1,0 +1,13 @@
+<template>
+    <div class="">
+        <b-nav-item :to="{ name: 'Home' }">Home</b-nav-item>
+        <b-nav-item :to="{ name: 'About' }">About</b-nav-item>
+        <b-nav-item href="https://github.com/tastyycode/vue-diablo3">Github Repository</b-nav-item>
+    </div>
+</template>
+
+<script>
+export default {
+  name: 'FootLinks'
+}
+</script>
