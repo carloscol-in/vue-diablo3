@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="bg-white dark:bg-gray-800">
+  <div id="app" class="dark:bg-gray-800">
     <LoadLayout v-if="isLoading">
       <BaseLoading />
     </LoadLayout>
