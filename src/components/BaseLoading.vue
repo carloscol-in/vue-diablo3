@@ -48,8 +48,8 @@ export default {
 <style lang="stylus">
 
 .spinner-wrapper
-    .spinner
-        width 4rem
-        height 4rem
+  .spinner
+    width 4rem
+    height 4rem
 
 </style>
