@@ -23,12 +23,6 @@ export default {
     ActiveSkills: () => import(/* webpackChunkName: "ActiveSkills" */'./ActiveSkills'),
     PassiveSkills: () => import(/* webpackChunkName: "PassiveSkills" */'./PassiveSkills')
   },
-  created () {
-    console.log('CREADO!')
-  },
-  destroyed () {
-    console.log('DESTRUIDO!')
-  },
   props: {
     skills: {
       required: true,
